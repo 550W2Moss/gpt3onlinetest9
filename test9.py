@@ -404,7 +404,7 @@ def app_sst_side():
     # new_me=recognize_from_mic(lang_mode,azurekey)
     # st.write(2)
 
-    new_me = recognize_from_mic(lang_mode, "19439566c34c48638bc715137e03e17b")
+    new_me = recognize_from_mic(lang_mode,st.secrets["azurekey"])
     st.session_state['count'] = st.session_state['count'] + 1
 
     if st.session_state['count'] == 1:
@@ -416,7 +416,7 @@ def app_sst_side():
     # new_you=respond(st.session_state['conv'],respond_mod,st.secrets["openaikey"])
     new_you = response_ai(st.session_state['conv'], respond_mod)
 
-    synthesize_to_speaker(new_you, lang_mode, "19439566c34c48638bc715137e03e17b")
+    synthesize_to_speaker(new_you, lang_mode,st.secrets["azurekey"])
     autoplay_audio()
 
     You_temp = 'YOU' + str(st.session_state['count'] - 1)
@@ -505,7 +505,7 @@ def app_sst_main():
     # new_me=recognize_from_mic(lang_mode,azurekey)
     # st.write(2)
 
-    new_me = recognize_from_mic(lang_mode, "19439566c34c48638bc715137e03e17b")
+    new_me = recognize_from_mic(lang_mode,st.secrets["azurekey"])
     st.session_state['count'] = st.session_state['count'] + 1
 
     if st.session_state['count'] == 1:
@@ -517,7 +517,7 @@ def app_sst_main():
     # new_you = respond(st.session_state['conv'], respond_mod, st.secrets["openaikey"])
     new_you = response_ai(st.session_state['conv'], respond_mod)
 
-    synthesize_to_speaker(new_you, lang_mode, "19439566c34c48638bc715137e03e17b")
+    synthesize_to_speaker(new_you, lang_mode,st.secrets["azurekey"])
     autoplay_audio()
 
     You_temp = 'YOU' + str(st.session_state['count'] - 1)
