@@ -120,7 +120,7 @@ def response_ai(conversation, mod):
         print(f'Request failed with status code {response.status_code}')
 
 def suggestion_ai(conversation, mod):
-    url = 'http://43.156.81.115:8001/respond'
+    url = 'http://43.156.81.115:8001/suggestion'
     params = {'mod': 'text-davinci-003',
               'conversation': 'last sunday i went to theatre'
               }
