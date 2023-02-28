@@ -115,6 +115,7 @@ def response_ai(conversation, mod):
         data = response.json()
         message = data['str']
         # print(message)
+        return message
     else:
         print(f'Request failed with status code {response.status_code}')
 
@@ -130,6 +131,7 @@ def suggestion_ai(conversation, mod):
         data = response.json()
         message = data['str']
         # print(message)
+        return message
     else:
         print(f'Request failed with status code {response.status_code}')
 
