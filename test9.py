@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 def recognize_from_mic(lang, azureapi):
     # Find your key and resource region under the 'Keys and Endpoint' tab in your Speech resource in Azure Portal
     # Remember to delete the brackets <> when pasting your key and region!
-    speech_config = speechsdk.SpeechConfig(subscription=azureapi, region="southeastasia")
+    speech_config = speechsdk.SpeechConfig(subscription=azureapi, region="eastasia")
     speech_config.speech_recognition_language = lang
     audio_config = speechsdk.audio.AudioConfig(filename="output.wav")
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
@@ -62,7 +62,7 @@ def autoplay_audio():
 def synthesize_to_speaker(text, lang, azureapi):
     # Find your key and resource region under the 'Keys and Endpoint' tab in your Speech resource in Azure Portal
     # Remember to delete the brackets <> when pasting your key and region!
-    speech_config = speechsdk.SpeechConfig(subscription=azureapi, region="southeastasia")
+    speech_config = speechsdk.SpeechConfig(subscription=azureapi, region="eastasia")
     speech_config.speech_synthesis_language = lang
     # In this sample we are using the default speaker
     # Learn how to customize your speaker using SSML in Azure Cognitive Services Speech documentation
