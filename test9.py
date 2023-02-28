@@ -105,8 +105,8 @@ def synthesize_to_speaker(text, lang, azureapi):
 
 def response_ai(conversation, mod):
     url = 'http://43.156.81.115:8001/respond'
-    params = {'mod': 'text-davinci-003',
-              'conversation': 'last sunday i went to theatre'
+    params = {'mod': mod,
+              'conversation': conversation
               }
     response = requests.get(url, params=params)
 
@@ -121,8 +121,8 @@ def response_ai(conversation, mod):
 
 def suggestion_ai(conversation, mod):
     url = 'http://43.156.81.115:8001/suggestion'
-    params = {'mod': 'text-davinci-003',
-              'conversation': 'last sunday i went to theatre'
+    params = {'mod': mod,
+              'conversation': conversation
               }
     response = requests.get(url, params=params)
 
