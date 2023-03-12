@@ -104,7 +104,7 @@ def synthesize_to_speaker(text, lang, azureapi):
 #     return response.choices[0].text
 
 def response_ai(conversation, mod):
-    url = 'http://43.156.81.115:8001/respond'
+    url = 'http://43.159.57.65:8001/respond'
     params = {'mod': mod,
               'conversation': conversation
               }
@@ -120,7 +120,7 @@ def response_ai(conversation, mod):
         print(f'Request failed with status code {response.status_code}')
 
 def suggestion_ai(conversation, mod):
-    url = 'http://43.156.81.115:8001/suggestion'
+    url = 'http://43.159.57.65:8001/suggestion'
     params = {'mod': mod,
               'conversation': conversation
               }
